@@ -374,10 +374,9 @@ footer .title {
   }
   .distraction-factors .section-title {
     grid-column: 1 / 4;
-  }
-  .distraction-factors .section-title {
     max-width: 315px;
   }
+  
   .footer {
     min-height: 768px;
   }
