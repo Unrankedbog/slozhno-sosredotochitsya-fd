@@ -129,6 +129,7 @@
 .header__description {
   align-self: center;
   justify-self: center;
+  margin-block-end: 10px;
 
   font-family: var(--font);
   font-weight: 700;
@@ -205,6 +206,7 @@
   flex-direction: column;
   gap: 20px;
 }
+
 /*<------------------------------------ Секции Конец ------------------------------------> */
 
 /*<------------------------------------ Галерея ------------------------------------> */
@@ -376,7 +378,7 @@ footer .title {
     grid-column: 1 / 4;
     max-width: 315px;
   }
-  
+
   .footer {
     min-height: 768px;
   }

@@ -16,10 +16,10 @@
   --subtitle-bg-color: rgba(255, 0, 112, 1);
   --title-color: rgba(255, 0, 112, 1);
   --subtitle-color: rgba(0, 0, 40, 1);
-  
+
   --description-bg-color: rgba(255, 0, 112, 1);
-  --border-color:rgba(255, 0, 112, 1);
-  --hover-color:rgba(255, 0, 112, 0.4);
-  --h1title-color:rgba(219, 0, 255, 1) ;
-  --description-color:rgba(0, 0, 40, 1) ;
+  --border-color: rgba(255, 0, 112, 1);
+  --hover-color: rgba(255, 0, 112, 0.4);
+  --h1title-color: rgba(219, 0, 255, 1);
+  --description-color: rgba(0, 0, 40, 1);
 }
