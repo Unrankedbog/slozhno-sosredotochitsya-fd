@@ -10,7 +10,7 @@
   background-color: var(--bg-color);
   min-height: 100vh;
   font-size: 1.125rem;
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: var(--font);
   width: 100%;
 }
 
@@ -21,16 +21,18 @@
   min-height: 668px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
+  color: var(--text-color);
+  font-family: var(--font);
 }
 /*<------------------------------------ REC и Уголки ------------------------------------> */
 .rec {
   position: absolute;
   top: 10px;
   right: 20px;
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: var(--font);
   font-weight: 400;
   line-height: 1.39;
-
+  text-transform: uppercase;
   color: rgba(255, 0, 112, 1);
 }
 
@@ -47,7 +49,8 @@
 }
 
 .title-decor {
-  background-color: var(--discription-color);
+  background-color: var(--description-bg-color);
+  color: var(--description-color);
 }
 .decorated-zone {
   position: relative;
@@ -59,7 +62,7 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border: 1px solid rgba(255, 0, 112, 1);
+  border: 1px solid var(--border-color);
 }
 
 .decorated-zone::before {
@@ -82,7 +85,6 @@
 .header__theme-menu {
   justify-self: end;
   align-self: center;
-  line-height: 1;
 }
 
 .header__theme-menu-list {
@@ -93,31 +95,30 @@
 .header__theme-menu-button {
   border: none;
   background: none;
-  
   cursor: pointer;
   outline: none;
   padding: 1.5px 13px;
-  color: rgba(255, 0, 112, 1);
-  font-family: "IBM Plex mono", sans-serif;
+  color: var(--border-color);
+  font-family: var(--font);
   font-weight: 400;
 }
 .header__theme-menu-button_active {
-  outline: 1px solid rgba(255, 0, 112, 1);
+  outline: 1px solid var(--border-color);
   pointer-events: none;
 }
 .header__theme-menu-button:hover {
-  outline: 1px solid rgba(255, 0, 112, 0.4);
+  outline: 1px solid var(--hover-color);
 }
 .header__theme-menu-button:focus-visible {
-  outline: 1px solid rgba(241, 178, 206, 1);
+  border-bottom: 1px solid var(--border-color);
 }
 /*<------------------------------------ Конец Меню ------------------------------------> */
 
 /*<------------------------------------ Тайтл и дискрипшн ------------------------------------> */
 .title {
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: var(--font);
   font-weight: 700;
-  color: rgba(219, 0, 255, 1);
+  color: var(--h1title-color);
   line-height: 0.83;
   align-self: center;
   justify-self: center;
@@ -128,8 +129,8 @@
 .header__description {
   align-self: center;
   justify-self: center;
-  color: rgba(0, 0, 40, 1);
-  font-family: "IBM Plex mono", sans-serif;
+
+  font-family: var(--font);
   font-weight: 700;
   line-height: 1.3;
   width: 100%;
@@ -141,13 +142,13 @@
 
 .main-content {
   color: var(--text-color);
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: var(--font);
   font-size: 1.125rem;
   display: grid;
   grid-auto-rows: auto;
   gap: 50px;
   padding: 0px 10px 0px 10px;
-  background-color: var(--main-color);
+
   padding-block-start: 40px;
   padding-block-end: 40px;
 }
@@ -160,6 +161,8 @@
 .section-content {
   display: flex;
   flex-direction: column;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
   gap: 10px;
   font-weight: 400;
   font-size: 1.125rem;
@@ -187,19 +190,21 @@
   border-bottom: 1px solid currentColor;
 }
 .link-decoration:focus-visible {
- 
   outline: 1px solid currentColor;
 }
 .subtitle-decor {
   font-weight: 700;
-  color: rgba(0, 0, 40, 1);
-  margin-block-end: 10px;
+  color: var(--description-color);
 }
 
 .weight-type {
   font-weight: 400;
 }
-
+.tips-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 /*<------------------------------------ Секции Конец ------------------------------------> */
 
 /*<------------------------------------ Галерея ------------------------------------> */
@@ -226,14 +231,12 @@
   align-items: center;
   justify-content: center;
   min-height: 668px;
-
-  background-color: var(--bg-color);
 }
 
 footer .title {
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: var(--font);
   font-weight: 700;
-  color: rgba(219, 0, 255, 1);
+  color: var(--h1title-color);
   line-height: 83%;
   align-self: center;
   justify-self: center;
@@ -255,48 +258,23 @@ footer .title {
   }
 
   .rec {
-    position: absolute;
     top: 20px;
     right: 30px;
-    font-family: "IBM Plex mono", sans-serif;
-    font-weight: 400;
-    line-height: 1.39;
-    color: rgba(255, 0, 112, 1);
   }
 
   .rec::after {
-    content: "";
-    display: inline-block;
-    width: 9px;
-    height: 9px;
-    background-color: rgba(255, 0, 112, 1);
-    border-radius: 50%;
     margin-left: 10px;
     margin-bottom: 2px;
-    box-shadow: 0px 0px 4px 2px rgba(255, 0, 112, 1);
-  }
-
-  .decorated-zone::before,
-  .decorated-zone::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border: 1px solid rgba(255, 0, 112, 1);
   }
 
   .decorated-zone::before {
     top: 20px;
     right: 20px;
-    border-bottom: none;
-    border-left: none;
   }
 
   .decorated-zone::after {
     bottom: 20px;
     left: 20px;
-    border-top: none;
-    border-right: none;
   }
   .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -321,21 +299,22 @@ footer .title {
     max-width: 364px;
   }
 
-  .top-layout {
+  .focus-barriers {
     grid-template-columns: 1fr 2fr;
   }
-  .top-layout .section-content {
+  .focus-barriers .section-content {
     grid-column: 2;
   }
 
-  .center-layout .section-title {
+  .distraction-factors .section-title {
     max-width: 236px;
   }
 
-  .bottom-layout {
+  .focus-tips {
     grid-template-columns: 1fr 2fr;
+    align-items: start;
   }
-  .bottom-layout .section-content {
+  .focus-tips .section-content {
     grid-column: 2;
   }
 
@@ -363,7 +342,7 @@ footer .title {
     grid-row: 4;
     grid-column: 2 / 4;
   }
-  
+
   .footer {
     min-height: 1024px;
   }
@@ -385,21 +364,21 @@ footer .title {
     min-width: 491px;
   }
 
-  .center-layout {
+  .distraction-factors {
+    display: grid;
     grid-template-rows: min-content 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .center-layout .section-content {
-    grid-row: 2;
+  .distraction-factors .section-content {
+    grid-row: auto;
   }
-  .center-layout .section-title {
+  .distraction-factors .section-title {
+    grid-column: 1 / 4;
+  }
+  .distraction-factors .section-title {
     max-width: 315px;
   }
   .footer {
     min-height: 768px;
   }
-}
-
-.theme-light .header .rec {
-  display: none;
 }
