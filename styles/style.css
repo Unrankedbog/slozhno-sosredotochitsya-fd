@@ -118,7 +118,7 @@
 .title {
   font-family: var(--font);
   font-weight: 700;
-  color: var(--h1title-color);
+  color: var(--pre-title-color);
   line-height: 0.83;
   align-self: center;
   justify-self: center;
@@ -238,7 +238,7 @@
 footer .title {
   font-family: var(--font);
   font-weight: 700;
-  color: var(--h1title-color);
+  color: var(--pre-title-color);
   line-height: 83%;
   align-self: center;
   justify-self: center;
@@ -278,15 +278,16 @@ footer .title {
     bottom: 20px;
     left: 20px;
   }
-  .title {
+  .header .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     justify-self: start;
     margin-left: -20px;
   }
   footer .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    justify-self: start;
+    
     letter-spacing: 0;
+    
   }
   .main-content {
     padding: 0px 20px 0px 20px;
